@@ -3,6 +3,7 @@
 
 const fs= require('fs');
 const axios=require('axios');
+const process = require('process');
 
 function cat(path) {
 
@@ -32,6 +33,19 @@ function webCat(URL) {
     ).catch( err => console.log("I'm sorry there was an error:", err))
 
 }
+
+//better way with async function
+
+// async function webCat(url) {
+//     try {
+//       let resp = await axios.get(url);
+//       console.log(resp.data);
+//     } catch (err) {
+//       console.error(`Error fetching ${url}: ${err}`);
+//       process.exit(1);
+//     }
+//   }
+  
 
 
 
